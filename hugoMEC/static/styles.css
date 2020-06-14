@@ -1,0 +1,704 @@
+/*Roboto*/
+
+@font-face{
+    font-family: "Roboto";
+    src: url(assets/fonts/Roboto-Black.ttf) format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Roboto";
+    src: url(assets/fonts/Roboto-BlackItalic.ttf) format("truetype");
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: "Roboto";
+    src: url(assets/fonts/Roboto-Bold.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Roboto";
+    src: url(assets/fonts/Roboto-BoldItalic.ttf);
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: "Roboto";
+    src: url(assets/fonts/Roboto-Italic.ttf) format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: "Roboto";
+    src: url(assets/fonts/Roboto-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Roboto";
+    src: url(assets/fonts/Roboto-Light.ttf) format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Roboto";
+    src: url(assets/fonts/Roboto-LightItalic.ttf) format("truetype");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: "Roboto";
+    src: url(assets/fonts/Roboto-Medium.ttf) format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Roboto";
+    src: url(assets/fonts/Roboto-MediumItalic.ttf);
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: "Roboto";
+    src: url(assets/fonts/Roboto-Thin.ttf) format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Roboto";
+    src: url(assets/fonts/Roboto-ThinItalic.ttf);
+    font-weight: 100;
+    font-style: italic;
+}
+
+/*LindenHill*/
+
+@font-face{
+    font-family: "LindenHill";
+    src: url(assets/fonts/LindenHill-webfont.eot);
+    src: url(assets/fonts/LindenHill-webfont.woff) format("woff"),
+    url(assets/fonts/LindenHill-webfont.ttf) format("truetype"),
+    url(assets/fonts/LindenHill-Italic-webfont.svg) format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "LindenHill";
+    src: url(assets/fonts/LindenHill-Italic-webfont.eot);
+    src: url(assets/fonts/LindenHill-Italic-webfont.woff) format("woff"),
+    url(assets/fonts/LindenHill-Italic-webfont.ttf) format("truetype"),
+    url(assets/fonts/LindenHill-Italic-webfont.svg) format("svg");
+    font-weight: normal;
+    font-style: italic;
+}
+
+:root{
+    --yale-blue: #0A5282;
+    --amber-sae: #FF7D09;
+    --green-ryb: #51A520;
+    --blue-jeans: #6DAEDB;
+    --patriarch: #6C1075;
+}
+
+html {
+    font-size: 16px;
+    font-family: "LindenHill", serif;
+    font-style: normal;
+    background: #eaedf1;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+em {
+    font-style: italic;
+}
+
+body{
+    max-width: 1200px;
+    margin: 10px auto;
+    font-size: 1rem;
+    width: 95vw;
+}
+
+#pageTitle{
+    display: inline-block;
+    font-size: 38pt;
+    position: relative;
+}
+
+header{
+    width: 95vw;
+    height: 5vw;
+    min-height: 70px;
+}
+
+footer{
+    width: 95vw;
+    height: 5vw;
+    min-height: 70px;
+    max-width: 100%;
+    text-align: center;
+}
+
+.copyrightMast{
+    text-align: center;
+    display: block;
+    display:inline-block;
+}
+
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: auto;
+    max-width: 100%;
+}
+
+.headerContainer h1 {
+    display: inline-block;
+}
+
+.topNav{
+    flex: 1 1 auto;
+    overflow: auto;
+    text-align: right;
+    min-width: 0;
+    width: 20%;
+}
+
+.navLinks{
+    height: 25px;
+}
+
+.navLinks li{
+    padding: 0 15px;
+    display: inline-block;
+    font-size: 1rem;
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+}
+
+.navLinks li:nth-child(3){
+    padding-right: 0;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.navLinks a:before{
+    content:"";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    padding-top: 1px;
+    top: 18px;
+    left: 15;
+    background: var(--yale-blue);
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.navLinks a:hover:before{
+    visibility: visible;
+    width: 20px;
+}
+
+hr {
+    border-top: 4px solid black;
+    margin-bottom: 10px;
+}
+
+.sectionSpacer{
+    height: 4em;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-size: 1.25rem;
+    color: var(--yale-blue)
+}
+
+.featuredBox{
+    display: flex;
+    justify-content: flex-start;
+    overflow: auto;
+    max-width: 100%;
+}
+
+.featuredArticleImg{
+    display: inline-block;
+    width: 65%;
+}
+
+.featuredArticleImage{
+    width: 100%;
+}
+
+.featuredArticleInfo{
+    display: inline-block;
+    padding-top: 0rem;
+    padding-left: 1rem;
+    flex: 4 4 auto;
+}
+
+.topFourBox{
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.halfWidthBox{
+    display: inline-block;
+    width: 48%;
+    font-size: 15px;
+}
+
+.topFourImg{
+    display: inline-block;
+    width: 100%;
+    content: url(assets/placeHolderHalf.jpg);
+}
+
+.topFourInfo{
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.listBox{
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.thirdWidthBox{
+    display: inline-block;
+    width: 31%;
+    font-size: 14px;
+}
+
+.thirdWidthImg{
+    display: inline-block;
+    width: 100%;
+    content: url(assets/placeHolderHalf.jpg)
+}
+
+.thirdWidthInfo{
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.emailSocialBar{
+    margin-top: 10px;
+    background: var(--yale-blue);
+    padding: 2.5rem 1.5em;
+}
+
+.emailHeadline{
+    font-family: "LindenHill", serif;
+    font-size: 2rem;
+    color: #eaedf1;
+    padding-bottom: 1.25rem;
+}
+
+.emailForm{
+    padding-bottom: 1.75rem;
+}
+
+.emailForm input[type=email]{
+    background: var(--yale-blue);
+    border: none;
+    border-bottom: 1px solid grey;
+    color: #eaedf1;
+    width: 175px;
+}
+
+.emailForm input[type=email]::placeholder{
+    color: #eaedf1;
+    background: var(--yale-blue);
+}
+
+.emailForm input[type=submit]{
+    font-family: "LindenHill", serif;
+    font-size: 1rem;
+    height: 18px;
+    background: #eaedf1;
+    color: black;
+    border: none;
+}
+
+.socialHeadline h2{
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    color: #eaedf1;
+    padding-bottom: 1.25rem;
+}
+
+#socialLinks{
+    display: flex;
+    overflow: auto;
+    width: 175px;
+    justify-content: space-between;
+}
+
+#socialLinks img{
+    height: 2rem;
+}
+
+.sideBar{
+    font-family: "Robot", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    max-width: 20%;
+}
+
+.sideBarList li{
+    margin-bottom: 0.75rem;
+}
+
+
+.aboutBlock{
+    display: inline-block;
+    width: 80%;
+    max-width: 80%;
+    left: 20%;
+}
+
+.aboutContainer{
+    display: flex;
+    overflow: auto;
+    max-width: 1200px;
+    justify-content: flex-start;
+}
+
+.aboutContent h3{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+}
+
+.aboutContent p {
+    font-family: "LindenHill", serif;
+    font-size: 1.25rem;
+    padding-bottom: 1.25rem;
+    overflow-wrap: normal;
+}
+
+.aboutContent h3::after{
+    content: "";
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 3rem;
+    margin: 0.25rem 0;
+    background: var(--yale-blue)
+}
+
+.contactContainer{
+    text-align: center;
+    width: 100%;
+    text-align: center;
+}
+
+.contactPrimaryBlock{
+    font-family: "LindenHill", serif;
+    font-size: 1.25rem;
+    text-align: justify;
+    display: inline-block;
+    size: 1.25rem;
+    width: 50%;
+    max-width: 600px;
+    min-width: 300px;
+}
+
+.contactBlockContainer{
+    display: inline-block;
+    width: 50%;
+    max-width: 600px;
+    min-width: 300px;
+}
+
+.contactBlockContainer h3{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    text-align: left;
+}
+
+.contactBlockContainer h3::after{
+    content: "";
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 3rem;
+    margin: 0.5rem 0;
+    background: var(--yale-blue);
+
+}
+
+.contactEmailBlock{
+    display: flex;
+    overflow: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.contactEmailBlock input{
+    display: inline-block;
+}
+
+.contactEmailBlock input[type=text], input[type=email]{
+    font-family: "LindenHill", serif;
+    font-size: 1.25rem;
+    border: none;
+    border-bottom: 1px solid grey;
+    height: 1.75rem;
+    background: #eaedf1;
+    width: 40%;
+}
+
+.contactEmailBlock input[type=email]{
+    font-family: "LindenHill", serif;
+    font-size: 1.25rem;
+    width: 100%;
+}
+
+.contactEmailBlock input[type=text]::placeholder, input[type=email]::placeholder{
+    font-family: "LindenHill", serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    background: #eaedf1;
+}
+
+#formSubmissionText {
+    font-family: "LindenHill", serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    width:100%;
+    height: 5rem;
+    background: #eaedf1;
+    border: none;
+    border-bottom: 1px solid grey;
+}
+
+#formSubmissionText::placeholder{
+    vertical-align: top;
+}
+
+.checkboxLabel{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-family: "LindenHill", serif;
+    font-size: 1.25rem;
+    text-align: left;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkboxLabel input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmarkCustom{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.25rem;
+    width: 1.25rem;
+    border: 1px solid grey;
+}
+
+.checkboxLabel:hover input ~.checkmarkCustom{
+    background-color: #ccc;
+    border: 1px solid grey;
+}
+
+.checkboxLabel input:checked ~ .checkmarkCustom{
+    background-color: var(--yale-blue);
+}
+
+.checkmarkCustom::after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkboxLabel input:checked ~ .checkmarkCustom:after{
+    display: block;
+}
+
+.checkboxLabel .checkmarkCustom:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+.contactEmailBlock input[type=submit]{
+    font-family: "LindenHill", serif;
+    font-size: 1.25rem;
+}
+
+.contactsSocialBlock{
+    display: flex;
+    overflow: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.contactSocialBlock h3{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    text-align: left;
+}
+
+#socialSVGs{
+    display: flex;
+    overflow: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    padding: 1.5rem 0;
+}
+
+#socialSVGs img{
+    height: 2rem;
+}
+
+/*Specific divs and one-offs*/
+#pageTitle h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+.headline{
+    font-family: "Roboto", sans-serif;
+    font-size: 2.25rem;
+    font-weight: 700;
+    padding-bottom: 0.75rem;
+}
+
+.headline:hover{
+    color: var(--yale-blue);
+}
+
+.byLine{
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-bottom: 0.75rem;
+}
+
+.articleDescriptionText{
+    font-family: "LindenHill", serif;
+    text-align: justify;
+    font-size: 1.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.aboutContent h2{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+#topLevelAboutBlock p{
+    font-family: "LindenHill", serif;
+    font-size: 1.5rem;
+}
+
+
+@media (max-width: 800px){
+    #pageTitle h1{
+        display: none;
+    }
+
+    .featuredBox{
+        flex-wrap: wrap;
+    }
+
+    .featuredArticleInfo{
+        padding: 15px 0px;
+    }
+    
+    .featuredArticleImage{
+        width: 100%;
+    }
+
+    .featuredArticleImg{
+        width: 100%;
+    }
+
+    .halfWidthBox{
+        width: 100%;
+    }
+
+    .topFourImg{
+        content: url(assets/placeHolderImage.jpg)
+    }
+
+    .thirdWidthBox{
+        width:100%;
+    }
+
+    .thirdWidthImg{
+        content: url(assets/placeHolderImage.jpg)
+    }
+}
+
+@media (max-width: 600px) {
+    #topLevelAboutBlock h2{
+        font-size: 2rem;
+    }
+    
+    .articleDescriptionText{
+        font-size: 1.25rem;
+    }
+}
