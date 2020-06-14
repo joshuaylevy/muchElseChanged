@@ -3,33 +3,19 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         <link href="defaults.css" rel="stylesheet">
         <link href="styles.css" rel="stylesheet">
         <title>Much Else Changed</title>
     </head>
     <body>
-        <header class="headerContainer">
-            
-            <div id="pageTitle">
-                <svg xmlns="http://www.w3.org/2000/svg" width="37.544px" height="32.272px" viewBox="0 -1782.8 2074.2 1782.8" xmlns:xlink="http://www.w3.org/1999/xlink" ><defs><path id="MJX-8-TEX-N-394" d="M51 0Q46 4 46 7Q46 9 215 357T388 709Q391 716 416 716Q439 716 444 709Q447 705 616 357T786 7Q786 4 781 0H51ZM507 344L384 596L137 92L383 91H630Q630 93 507 344Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><g data-mml-node="math"><g data-mml-node="mstyle" transform="scale(2.49)"><g data-mml-node="TeXAtom"><g data-mml-node="mi"><use xlink:href="#MJX-8-TEX-N-394"></use></g></g></g></g></g></svg>
-                <h1>Much Else Changed</h1>
-            </div>
-
-            <nav class="topNav">
-                <ul class="navLinks">
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="archives.html">Archives</a></li>
-                </ul>
-            </nav>
-
-        </header>
+        
+        {{ partial "header.html" }}
 
         <main>
+
             <hr>
             <div class="sectionSpacer">
-                <h3><strong>Featured Article Section</strong></h3>
+                <h3>FEATURED</h3>
            </div>
 
             <section class="featuredBox">
@@ -38,26 +24,25 @@
                 </div>
                 <div class="featuredArticleInfo">
                     <div class="headline">
-                        <h2>FEATURED ARTICLE HEADLINE</h2>
+                        <h2>Randomized Control Trials: Ethics, equipoise, and other concerns</h2>
                     </div>
-                    <cite class="byLine">
-                        <h3>FEATURED ARTICLE BYLINE</h3>
-                    </cite>
                     <div class="articleDescription">
                         <p class="articleDescriptionText">
-                            FEATURED ARTICLE DESCRIPTION TEXT
+                            In recent decades, there has been a shift among multilateral organizations, policymakers, and scholars as they train their energies and efforts on questions of "economic development."
                         </p>
+                    </div>
+                    <div class="byLine">
+                        <h3>By Joshua Levy</h3>
                     </div>
                 </div>
             </section>
 
             <div class="sectionSpacer">
-                <h3><strong>END OF Featured Article Section</strong></h3>
             </div>
 
             <hr>
             <div class="sectionSpacer">
-                <h3><strong>Top Four Articles Section</strong></h3>
+                <h3>RECOMMENDED</h3>
             </div>
 
             <section class="topFourBox">
@@ -74,9 +59,9 @@
                                 TOP FOUR ARTICLE DESCRIPTION TEXT 1
                             </p>
                         </div>
-                        <cite class="byLine">
+                        <div class="byLine">
                             <h3> TOP FOUR ARTICLE BYLINE 1</h3>
-                        </cite>
+                        </div>
                     </div>
                 </div>
 
@@ -93,9 +78,9 @@
                                 TOP FOUR ARTICLE DESCRIPTION TEXT 2
                             </p>
                         </div>
-                        <cite class="byLine">
+                        <div class="byLine">
                             <h3> TOP FOUR ARTICLE BYLINE 2</h3>
-                        </cite>
+                        </div>
                     </div>
                 </div>
 
@@ -112,9 +97,9 @@
                                 TOP FOUR ARTICLE DESCRIPTION TEXT 3
                             </p>
                         </div>
-                        <cite class="byLine">
+                        <div class="byLine">
                             <h3> TOP FOUR ARTICLE BYLINE 3</h3>
-                        </cite>
+                        </div>
                     </div>
                 </div>
 
@@ -131,23 +116,42 @@
                                 TOP FOUR ARTICLE DESCRIPTION TEXT 4
                             </p>
                         </div>
-                        <cite class="byLine">
+                        <div class="byLine">
                             <h3> TOP FOUR ARTICLE BYLINE 4</h3>
-                        </cite>
+                        </div>
                     </div>
                 </div>
 
             </section>
 
             <div class="sectionSpacer">
-                <h3><strong>END OF Top Four Articles Section</strong></h3>
             </div>
 
             <hr>
             <div class="emailSocialBar" style="margin-top: 20px;">
                 <div class="emailSocialBarContent">
-                    <div style="text-align:center;">
-                        <p>Email sign up box (input) and social media .pngs</p>
+                    <div class="emailHeadline">
+                        <h2>Like what's changed? Get the latest emailed to you!</h2>
+                    </div>
+                    <div class="emailForm">
+                        <form>
+                            <input type="email" placeholder="Email Address">
+                            <input type="submit" value="Join">
+                        </form>
+                    </div>
+                    <div class="socialHeadline">
+                        <h2>And follow what changes on social media!</h2>
+                    </div>
+                    <div id="socialLinks">
+                        <a href="https://facebook.com">
+                            <img src="assets/social/facebook-light.svg" alt="facebook logo svg">
+                        </a>
+                        <a href="https://twitter.com">
+                            <img src="assets/social/twitter-light.svg" alt="twitter logo svg">
+                        </a>
+                        <a href="https://instagram.com">
+                            <img src="assets/social/instagram-light.svg" alt="instagram logo svg">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -155,7 +159,7 @@
             <hr>
 
             <div class="sectionSpacer">
-                <h3><strong>Article List Section </strong></h3>
+                <h3>ARCHIVES</h3>
             </div>
 
             <section class="listBox">
@@ -167,9 +171,9 @@
                         <div class="headline">
                             THIRD WIDTH HEADLINE 1
                         </div>
-                        <cite class="byLine">
+                        <div class="byLine">
                             THIRD WIDTH BYLINE 1
-                        </cite>
+                        </div>
                     </div>
                 </div>
 
@@ -181,9 +185,9 @@
                         <div class="headline">
                             THIRD WIDTH HEADLINE 2
                         </div>
-                        <cite class="byLine">
+                        <div class="byLine">
                             THIRD WIDTH BYLINE 2
-                        </cite>
+                        </div>
                     </div>
                 </div>
 
@@ -195,9 +199,9 @@
                         <div class="headline">
                             THIRD WIDTH HEADLINE 3
                         </div>
-                        <cite class="byLine">
+                        <div class="byLine">
                             THIRD WIDTH BYLINE 3
-                        </cite>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -205,14 +209,7 @@
         </main>
 
 
-        <footer>
-            <hr>
-            <navbar>
-                <h2>About</h2>
-                <h2>Contact</h2>
-                <h2>Archives</h2>
-            </navbar>
-        </footer>
+        {{ partial "footer.html" }}
     </body>
 
 </html>
