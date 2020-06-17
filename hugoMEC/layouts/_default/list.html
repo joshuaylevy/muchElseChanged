@@ -1,0 +1,21 @@
+{{ define "main" }}
+    <main>
+        <article class="content">
+            <h2 class="heading">{{ .Title }}</h2>
+            <p>{{ .Description }}</p>
+        </article>
+
+        <ul>
+            {{ range .Pages }}
+            {{ if not .Draft }}
+                <a href="{{ .url }}">
+                    <div class="card">
+                        <h3>{{ .Title }}</h3>
+                        <p>{{ .Description }}</p>
+                    </div>
+                </a>
+            {{ end }}
+            {{ end }}
+        </ul>
+    </main>
+{{ end }}

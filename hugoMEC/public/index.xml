@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Much Else Changed</title>
+    <link>http://example.org/</link>
+    <description>Recent content on Much Else Changed</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>FeaturedArticleTest</title>
+      <link>http://example.org/featuredarticletest/</link>
+      <pubDate>Tue, 16 Jun 2020 18:17:52 -0400</pubDate>
+      
+      <guid>http://example.org/featuredarticletest/</guid>
+      <description>here is some featured article text</description>
+    </item>
+    
+    <item>
+      <title>TopfourArticle1</title>
+      <link>http://example.org/topfourarticle1/</link>
+      <pubDate>Tue, 16 Jun 2020 18:00:44 -0400</pubDate>
+      
+      <guid>http://example.org/topfourarticle1/</guid>
+      <description>here is some content for top four article 1</description>
+    </item>
+    
+  </channel>
+</rss>

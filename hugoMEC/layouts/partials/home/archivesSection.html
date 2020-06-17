@@ -1,0 +1,13 @@
+{{ partial "sectionSpacer.html" (dict "sectionHeaderName" "ARCHIVES") }}
+
+<section>
+    <ul>
+    {{ range .Pages }}
+    {{ if not .Draft }}
+        {{ partial "articleCard.html" }}
+    {{ end }}
+    {{ end }}
+    </ul>
+</section>
+
+{{ partial "sectionSpacer.html" (dict "sectionHeaderName" "") }}

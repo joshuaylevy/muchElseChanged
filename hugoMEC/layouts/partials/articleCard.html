@@ -1,0 +1,22 @@
+<li>
+    <div class="articleCard">
+        <a href="{{ .Url }}">
+            <div class="articleImg">
+                <img class="articleImage" src="{{ .CardImg }}">
+            </div>
+        </a>
+        <div class="articleInfo">
+            <div class="headline">
+                <a href="{{ .Url }}">
+                    <h2>{{ .Title }}</h2>
+                </a>
+            </div>
+            <div class="articleDescription">
+                <p class="articleDescriptionText">{{ .ArticleDescription }}</p>
+            </div>
+            <div class="byLine">
+                <h3> {{ .Author }}</h3>
+            </div>
+        </div>
+    </div>
+</li>

@@ -1,0 +1,17 @@
+{{ partial "sectionSpacer.html" (dict "sectionHeaderName" "FEATURED") }}
+
+{{ $category := "featured" }}
+
+<section class="featuredBox">
+    <ul>
+    {{ range .Pages }}
+    {{ if and (not (.Draft)) (eq .Section $category) }}
+        {{ partial "articleCard.html" }}
+    {{ end }}
+    <li><a href="{{ .Url }}"></a></li>
+    <li> {{ .Title }}</li>
+    {{ end }}
+    </ul>
+</section>
+
+{{ partial "sectionSpacer.html" (dict "sectionHeaderName" "") }}
