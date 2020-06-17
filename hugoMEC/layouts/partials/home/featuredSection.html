@@ -8,10 +8,10 @@
     {{ if and (not (.Draft)) (eq .Section $category) }}
         {{ partial "articleCard.html" }}
     {{ end }}
-    <li><a href="{{ .Url }}"></a></li>
-    <li> {{ .Title }}</li>
     {{ end }}
     </ul>
+
+
 </section>
 
 {{ partial "sectionSpacer.html" (dict "sectionHeaderName" "") }}
