@@ -1,8 +1,8 @@
 {{ define "main" }}
     <main>
-        {{ partial "home/featuredSection.html" }}
-        {{ partial "home/recommendedSection.html" }}
+        {{ partial "home/featuredSection.html" . }}
+        {{ partial "home/recommendedSection.html" . }}
         {{ partial "home/socialBarSection.html" }}
-        {{ partial "home/archivesSection.html" }}
+        {{ partial "home/archivesSection.html" . }}
     </main>
 {{ end }}

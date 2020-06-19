@@ -1,21 +1,21 @@
 <li>
     <div class="articleCard">
-        <a href="{{ .Url }}">
+        <a href={{ .Params.Url }}>
             <div class="articleImg">
-                <img class="articleImage" src="{{ .CardImg }}">
+                <img class="articleImage" src={{ .Params.cardImg }}>
             </div>
         </a>
         <div class="articleInfo">
             <div class="headline">
-                <a href="{{ .Url }}">
-                    <h2>{{ .Title }}</h2>
+                <a href= {{ .Params.Url }}>
+                    <h2>{{ .Params.Title }}</h2>
                 </a>
             </div>
             <div class="articleDescription">
-                <p class="articleDescriptionText">{{ .ArticleDescription }}</p>
+                <p class="articleDescriptionText">{{ .Params.ArticleDescription }}</p>
             </div>
             <div class="byLine">
-                <h3> {{ .Author }}</h3>
+                <h3>{{ .Params.Author }}</h3>
             </div>
         </div>
     </div>

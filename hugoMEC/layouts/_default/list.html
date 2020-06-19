@@ -8,7 +8,7 @@
         <ul>
             {{ range .Pages }}
             {{ if not .Draft }}
-                <a href="{{ .url }}">
+                <a href= {{ .Params.Url }}>
                     <div class="card">
                         <h3>{{ .Title }}</h3>
                         <p>{{ .Description }}</p>

@@ -1,14 +1,14 @@
 ---
-title: "Recommended Article 1"
+title: "Recommended Article 2"
 articleDescription: "featured article description text"
 date: 2020-06-16T18:17:52-04:00
-author: "Joshua Levy"
+author: "Bill Donato"
 draft: false
 type: "recommended"
 cardImg: "/assets/images/placeHolderHalf.jpg"
 tags: ["test"]
 categories: ["recommended"]
-url: "/recommendedarticle1.html"
+url: "recommendedarticle2.html"
 ---
 
-here is some content for top four article 1
+here is some content for top four article 2

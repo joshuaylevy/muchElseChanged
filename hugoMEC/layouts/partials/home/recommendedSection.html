@@ -1,15 +1,15 @@
-{{ partial "sectionSpacer.html" (dict "sectionHeaderName" "RECOMMENDED") }}
+{{ partial "sectionSpacerTop.html" (dict "sectionHeaderName" "RECOMMENDED") }}
 
 {{ $category := "recommended" }}
 
 <section class=topFourBox>
     <ul>
     {{ range .Pages }}
-    {{ if and (not (.Draft)) (eq .Category $category ) }}
-        {{ partial "articleCard.html" }}
-    {{ end }}
+        {{ if and (in .Params.Categories $category) (not .Draft) }}
+            {{ partial "articleCard.html" . }}
+        {{ end }}
     {{ end }}
     </ul>
 </section>
 
-{{ partial "sectionSpacer.html" (dict "sectionHeaderName" "") }}
+{{ partial "sectionSpacerBot.html" (dict "sectionHeaderName" "") }}

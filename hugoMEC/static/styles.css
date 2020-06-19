@@ -243,15 +243,25 @@ hr {
     justify-content: flex-start;
     overflow: auto;
     max-width: 100%;
+    border: 1px red solid;
 }
 
-.featuredArticleImg{
+.featuredBox a .articleImg{
     display: inline-block;
     width: 65%;
+    border: 1px blue solid;
 }
 
-.featuredArticleImage{
+.articleImage{
     width: 100%;
+}
+
+.featuredBox .articleInfo{
+    display: inline-block;
+    padding-top: 0rem;
+    padding-left: 1rem;
+    flex: 4 4 auto;
+    vertical-align: top;
 }
 
 .featuredArticleInfo{
@@ -261,7 +271,7 @@ hr {
     flex: 4 4 auto;
 }
 
-.topFourBox{
+.topFourBox ul {
     display: flex;
     justify-content: space-between;
     overflow: auto;
@@ -269,29 +279,30 @@ hr {
     max-width: 100%;
 }
 
-.halfWidthBox{
+.topFourBox ul li {
     display: inline-block;
+    border: 1px orange solid;
     width: 48%;
-    font-size: 15px;
 }
 
-.topFourImg{
+.topFourBox .articleCard{
     display: inline-block;
     width: 100%;
-    content: url(assets/placeHolderHalf.jpg);
+    border: 1px solid purple;
 }
 
-.topFourInfo{
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
-
-.listBox{
+.archivesBox ul {
     display: flex;
     justify-content: space-between;
     overflow: auto;
     flex-wrap: wrap;
     max-width: 100%;
+}
+
+.archivesBox ul li {
+    display: inline-block;
+    border: 1px green solid;
+    width: 31%;
 }
 
 .thirdWidthBox{

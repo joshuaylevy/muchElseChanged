@@ -1,13 +1,15 @@
-{{ partial "sectionSpacer.html" (dict "sectionHeaderName" "ARCHIVES") }}
+{{ partial "sectionSpacerTop.html" (dict "sectionHeaderName" "ARCHIVES") }}
 
-<section>
+NEED TO ADD PADDING FOR RECOMMEND AND ARCHIVES SECTIONS
+
+<section class="archivesBox">
     <ul>
     {{ range .Pages }}
-    {{ if not .Draft }}
-        {{ partial "articleCard.html" }}
-    {{ end }}
+        {{ if and (not .Draft) (not (in .Params.Categories "static")) }}
+            {{ partial "articleCard.html" . }}
+        {{ end }}
     {{ end }}
     </ul>
 </section>
 
-{{ partial "sectionSpacer.html" (dict "sectionHeaderName" "") }}
+{{ partial "sectionSpacerBot.html" (dict "sectionHeaderName" "") }}
