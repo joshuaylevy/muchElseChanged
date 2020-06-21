@@ -2,11 +2,12 @@
 title: "{{ replace .Name "-" " " | title }}"
 articleDescription: 
 date: {{ .Date }}
-author: Joshua Levy
+author: "Joshua Levy"
 draft: true
-category: archives
 cardImg:
 tags:
+categories: ["archives"]
 url:
+specificStyles: 
 ---
 

@@ -2,11 +2,9 @@
 
 <main>
     <article class="content">
-        <h1> {{ .Title }}</h1>
-        <h3 class="authorDate">{{ .Params.Author }} - {{ .Date }} </h3>
+        <div class="contentBody">
+            {{ .Content }}
+        </div>
     </article>
 </main>
-
-{{ .Content }}
-
 {{ end }}

@@ -243,13 +243,22 @@ hr {
     justify-content: flex-start;
     overflow: auto;
     max-width: 100%;
-    border: 1px red solid;
 }
 
-.featuredBox a .articleImg{
+.featuredBox ul li .articleCard{
+    display: flex;
+    justify-content: flex-start;
+    overflow: auto;
+    max-width: 100%;
+}
+
+.featuredBox .articleImg{
     display: inline-block;
     width: 65%;
-    border: 1px blue solid;
+}
+
+.featuredBox .articleImageDS{
+    display: none;
 }
 
 .articleImage{
@@ -264,13 +273,6 @@ hr {
     vertical-align: top;
 }
 
-.featuredArticleInfo{
-    display: inline-block;
-    padding-top: 0rem;
-    padding-left: 1rem;
-    flex: 4 4 auto;
-}
-
 .topFourBox ul {
     display: flex;
     justify-content: space-between;
@@ -281,14 +283,16 @@ hr {
 
 .topFourBox ul li {
     display: inline-block;
-    border: 1px orange solid;
     width: 48%;
 }
 
 .topFourBox .articleCard{
     display: inline-block;
     width: 100%;
-    border: 1px solid purple;
+}
+
+.topFourBox .articleInfo{
+    padding: 1rem 0;
 }
 
 .archivesBox ul {
@@ -301,25 +305,15 @@ hr {
 
 .archivesBox ul li {
     display: inline-block;
-    border: 1px green solid;
     width: 31%;
 }
 
-.thirdWidthBox{
-    display: inline-block;
-    width: 31%;
-    font-size: 14px;
+.archivesBox .articleInfo{
+    padding: 1rem 0;
 }
 
-.thirdWidthImg{
-    display: inline-block;
-    width: 100%;
-    content: url(assets/placeHolderHalf.jpg)
-}
-
-.thirdWidthInfo{
-    padding-top: 1em;
-    padding-bottom: 1em;
+.archivesBox .articleDescription{
+    display: none;
 }
 
 .emailSocialBar{
@@ -392,7 +386,6 @@ hr {
 .sideBarList li{
     margin-bottom: 0.75rem;
 }
-
 
 .aboutBlock{
     display: inline-block;
@@ -671,37 +664,34 @@ hr {
         display: none;
     }
 
-    .featuredBox{
+    .featuredBox .articleCard{
         flex-wrap: wrap;
     }
 
-    .featuredArticleInfo{
-        padding: 15px 0px;
+    .featuredBox .articleImg{
+        width: 100%;
+    }
+
+    .featuredBox .articleInfo{
+        padding: 1rem 0;
     }
     
-    .featuredArticleImage{
+    .topFourBox ul li{
         width: 100%;
     }
 
-    .featuredArticleImg{
+    .topFourBox .articleInfo{
+        padding: 1rem 0;
+    }
+
+    .archivesBox ul li{
         width: 100%;
     }
 
-    .halfWidthBox{
-        width: 100%;
+    .archivesBox .articleInfo{
+        padding: 1rem 0;
     }
 
-    .topFourImg{
-        content: url(assets/placeHolderImage.jpg)
-    }
-
-    .thirdWidthBox{
-        width:100%;
-    }
-
-    .thirdWidthImg{
-        content: url(assets/placeHolderImage.jpg)
-    }
 }
 
 @media (max-width: 600px) {

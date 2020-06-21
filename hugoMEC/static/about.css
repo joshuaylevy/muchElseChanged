@@ -1,0 +1,51 @@
+html{
+    font-size: 16px;
+    
+}
+
+.content{
+    text-align: center;
+    width: 100%;
+}
+
+.contentBody{
+    display: inline-block;
+    width: 70%;
+    max-width: 70%;
+    text-align: left;
+}
+
+h2{
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+h4{
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+}
+
+h4::after{
+    content: "";
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 3rem;
+    margin: 0.25rem 0;
+    background: var(--yale-blue);
+}
+p{
+    font-family: "LindenHill", serif;
+    font-size: 1.25rem;
+    padding-bottom: 1.25rem;
+    overflow-wrap: normal;
+}

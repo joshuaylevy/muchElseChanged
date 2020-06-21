@@ -3,6 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="defaults.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
+    <link href="{{ .Params.specificStyles }}" rel="stylesheet">
     {{ $title := site.Title }}
     {{ if not .IsHome }}
         {{ $title = printf "%s | %s" .Title site.Title }}
