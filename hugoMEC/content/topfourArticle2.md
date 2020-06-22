@@ -6,7 +6,7 @@ author: "Bill Donato"
 draft: false
 type: "recommended"
 cardImg: "/assets/images/placeHolderHalf.jpg"
-tags: ["test"]
+tags: ["public"]
 categories: ["recommended"]
 url: "recommendedarticle2.html"
 ---

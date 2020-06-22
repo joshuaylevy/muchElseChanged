@@ -1,0 +1,8 @@
+<section>
+    <ul class="tagsList">
+      {{ range $taxonomyname, $taxonomy := .Site.Taxonomies.tags }}
+        <h6><li class="tagsListEnum"><a href="{{ "/" | relLangURL}}{{ $taxonomyname | urlize }}">{{ $taxonomyname }}</a>
+        </li></h6>
+      {{ end }}
+    </ul>
+  </section>

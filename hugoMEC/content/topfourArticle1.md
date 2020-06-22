@@ -6,7 +6,7 @@ author: "Joshua Levy"
 draft: false
 type: "recommended"
 cardImg: "/assets/images/placeHolderHalf.jpg"
-tags: ["test"]
+tags: ["development"]
 categories: ["recommended"]
 url: "/recommendedarticle1.html"
 ---

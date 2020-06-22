@@ -36,6 +36,6 @@ Joshua Levy is presently a James Gaither Junior Fellow with the Carnegie Endowme
 
 #### How It's Made
 
-Much Else Changed is made entirely with open-source software. As someone without a formal background in web-development I am always open to tips, feedback, and suggestions!
+Much Else Changed is made entirely with open-source software. Most things have been created with HTML, CSS, and a JavaScript library called d3.js. Additionally, Hugo is used as a framework with light CMS features. As someone without a formal background in web-development I am always open to tips, feedback, and suggestions!
 
 {{< sectionSpacerSC >}}

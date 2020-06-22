@@ -1,9 +1,11 @@
 {{ define "main" }}
-
 <main>
     <article class="content">
         <div class="contentBody">
+            {{ with . }}
             {{ .Content }}
+            {{ end }}
+
         </div>
     </article>
 </main>

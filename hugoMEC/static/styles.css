@@ -175,7 +175,7 @@ footer{
     display: inline-block;
 }
 
-.topNav{
+ul .topNav{
     flex: 1 1 auto;
     overflow: auto;
     text-align: right;
@@ -309,7 +309,7 @@ hr {
 }
 
 .archivesBox .articleInfo{
-    padding: 1rem 0;
+    padding: 0.75rem 0;
 }
 
 .archivesBox .articleDescription{
@@ -631,6 +631,14 @@ hr {
 .headline:hover{
     color: var(--yale-blue);
 }
+
+.archivesBox .headline{
+    font-family: "Robot", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    padding-bottom: 0.25rem;
+}
+
 
 .byLine{
     font-family: "Roboto", sans-serif;

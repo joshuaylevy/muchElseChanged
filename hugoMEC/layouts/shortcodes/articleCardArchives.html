@@ -1,0 +1,15 @@
+{{/*  {{ $selectedTag := "asdf"}}
+
+{{ $selectedTag}}  */}}
+
+{{ $directory:= "content"}}
+
+<section class="archivesBox">
+    <ul>
+        {{ range .Site.RegularPages }}
+            {{ if and (not .Draft) (not (in .Params.Categories "static")) }}
+                {{ partial "articleCard.html" . }}
+            {{ end }}
+        {{ end }}
+    </ul>
+</section>

@@ -5,7 +5,7 @@ date: 2020-06-16T18:17:52-04:00
 author: "Joshua Levy"
 draft: false
 cardImg: "/assets/images/placeHolderImage.jpg"
-tags:
+tags: ["finance"]
 categories: ["featured"]
 url: "/featuredarticle1.html"
 specificStyles: "testerCSS.css"
