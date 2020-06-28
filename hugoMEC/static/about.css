@@ -42,6 +42,7 @@ h4::after{
     margin: 0.25rem 0;
     background: var(--yale-blue);
 }
+
 p{
     font-family: "LindenHill", serif;
     font-size: 1.25rem;

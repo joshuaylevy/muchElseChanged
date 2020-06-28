@@ -175,6 +175,11 @@ footer{
     display: inline-block;
 }
 
+.footerContainer{
+    text-align: right;
+}
+
+
 ul .topNav{
     flex: 1 1 auto;
     overflow: auto;
