@@ -9,9 +9,13 @@
         <div class="articleImg">
             <a href={{ .Params.Url }}>
                 <img class="articleImage"
-                srcset="{{ .Params.cardImg}} 1280w, {{ $resizedSmall }} 200w, {{ $resizedMedium }} 600w, {{ $resizedLarge }} 800w "
+                srcset="{{ .Params.cardImg }} 1280w, {{ $resizedSmall }} 200w, {{ $resizedMedium }} 600w, {{ $resizedLarge }} 800w "
                 sizes="(max-width: 800px) 1200px, 200px, 600px, 800px"
                 src="{{ .Params.cardImg }}">
+                Base path: {{ .Params.cardImg }}
+                Small path: {{ $resizedSmall }}
+                Medium path: {{ $resizedMedium }}
+                Large path: {{ $resizedLarge }}
             </a>
         </div>
         <div class="articleInfo">
