@@ -8,6 +8,7 @@ cardImg:
 tags:
 categories: ["archives"]
 url:
+defaultStyles:
 specificStyles: 
 ---
 

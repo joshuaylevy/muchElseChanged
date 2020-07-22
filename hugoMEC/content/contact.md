@@ -8,6 +8,7 @@ cardImg:
 tags:
 categories: ["static"]
 url: "/contact.html"
+defaultStyles: "styles.css"
 specificStyles: 
 ---
 {{< contactFullPage >}}

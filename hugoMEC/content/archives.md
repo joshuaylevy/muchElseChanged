@@ -8,6 +8,7 @@ cardImg:
 tags:
 categories: ["static"]
 url: "/archives.html"
+defaultStyles: "styles.css"
 specificStyles: "archives.css"
 ---
 <!-- TODO : BUILD A JS SCRIPT WITH A LISTENER THAT PASSES THE 'CLICKED' TAG THROUGH TO THE SC THAT FILTERS WHICH POSTS ARE SHOWN -->
@@ -22,3 +23,5 @@ specificStyles: "archives.css"
 ---
 
 {{< articleCardArchives >}}
+
+{{< sectionSpacerSC >}}

@@ -9,6 +9,7 @@ cardImg: "static/assets/placeHolderImage.jpg"
 categories: ["static"]
 tags: 
 url: "/about.html"
+defaultStyles: "styles.css"
 specificStyles: "about.css"
 ---
 
@@ -24,13 +25,13 @@ specificStyles: "about.css"
 
 In economics, the phrase *ceteris paribus* abounds. It means "all else equal" and is a useful framework for understanding how changing one variable can affect a bigger system. But, in reality, doing analysis in this way can conceal important truths. After all, the world doesn't change one variable at at time.
 
-Policy is inherently interdisciplinary. So, it often makes sense to understand what happens if *multiple* variables are changing all at the same time. That additional level of complexity is what Much else Changed is all about. This project's title is a reference to *ceteris paribus's* lesser-known brother: *mutatis mutandis*, which literally translates to "having changed what needs to be changed."
+Policy is inherently interdisciplinary. So, it often makes sense to understand what happens if *multiple* variables are changing all at the same time. That additional level of complexity is what Much Else Changed is all about. This project's title is a reference to *ceteris paribus's* lesser-known brother: *mutatis mutandis*, which literally translates to "having changed what needs to be changed."
 
 {{< sectionSpacerSC >}}
 
 #### The Author
 
-Joshua Levy is presently a James Gaither Junior Fellow with the Carnegie Endowment for International Peace's Asian studies group. There he studies U.S.-China economic relations. Joshua is a graduate of Georgetown University's Edmund A. Walsh School of Foreign Service where he studied International Political Economy, Mathematics, and Japanese. Though he was born in Tokyo, Japan, and grew up around the Asia-Pacific region before moving to the United States for university, Joshua considers Hong Kong home.
+Joshua Levy is presently a James Gaither Junior Fellow with the Carnegie Endowment for International Peace's Asia Program. There he studies U.S.-China economic relations. Joshua is a graduate of Georgetown University's Edmund A. Walsh School of Foreign Service where he studied International Political Economy, Mathematics, and Japanese. Though he was born in Tokyo, Japan, and grew up around the Asia-Pacific region before moving to the United States for university, Joshua considers Hong Kong home.
 
 {{< sectionSpacerSC >}}
 

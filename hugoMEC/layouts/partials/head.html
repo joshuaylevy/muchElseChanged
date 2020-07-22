@@ -1,12 +1,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/social/mecFavIcon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="defaults.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+    <link href="{{ .Params.defaultStyles }}" rel="stylesheet">
     <link href="{{ .Params.specificStyles }}" rel="stylesheet">
     {{ $title := site.Title }}
     {{ if not .IsHome }}
         {{ $title = printf "%s | %s" .Title site.Title }}
     {{ end }}
     <title>{{ $title }}</title>
+    {{if in .Params.Categories "article" }}
+        <script src="https://d3js.org/d3.v5.min.js" ></script>
+        <script src="https://d3js.org/d3-scale.v3.min.js" defer></script>
+        <script src="https://d3js.org/d3-axis.v1.min.js" defer></script>
+    {{ end }}
+
+
 </head>

@@ -2,12 +2,21 @@
 <html lang="en">
     <head>
         {{ partial "head.html" . }}
+        {{ if .IsHome }}
+            <link href="styles.css", rel="stylesheet">
+        {{ end }}
     </head>
     <body>
-        {{ partial "header.html" . }}
-        {{ block "main" . }}
-        {{ end }}
-        {{ partial "footer.html" . }}
+        {{ if not (in .Params.Categories "article") }}
+            {{ partial "header.html" . }}
+            {{ block "main" . }}
+            {{ end }}
+            {{ partial "footer.html" . }}
+        {{ else}}
+            {{ block "main" . }}
+            {{ end }}
+            {{ partial "footer.html" . }}
+        {{ end}}
     </body>
 
 </html>

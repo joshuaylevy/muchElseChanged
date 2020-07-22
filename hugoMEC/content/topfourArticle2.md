@@ -8,6 +8,7 @@ type: "recommended"
 cardImg: "/assets/images/placeHolderHalf.jpg"
 tags: ["public"]
 categories: ["recommended"]
+defaultStyles: "styles.css"
 url: "recommendedarticle2.html"
 ---
 

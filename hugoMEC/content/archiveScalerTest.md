@@ -7,6 +7,7 @@ draft: false
 cardImg: "/assets/images/placeHolderImage.jpg"
 tags: ["trade"]
 categories: ["archives"]
+defaultStyles: "styles.css"
 url: "scalerTest.html"
 ---
 
