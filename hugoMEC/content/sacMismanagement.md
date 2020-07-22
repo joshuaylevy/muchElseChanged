@@ -26,7 +26,7 @@ SAC, officially a part of the Vice President's Office for Student Affairs, recei
 
 {{< includeJS path="assets/posts/sacMismanagement/finAppNormalizedBar.js" id="finAppBarChart" >}}
 
-
+this is another change solely for the purpose of testing netlify
 
 {{< sectionSpacerSC >}}
 {{< sectionSpacerSC >}}
