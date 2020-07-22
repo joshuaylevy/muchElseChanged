@@ -1,53 +1,91 @@
-{{ define "main" }}
-    <main>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/social/mecFavIcon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="defaults.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link href="about.css" rel="stylesheet">
+    
+    
+        
+    
+    <title>about page | Much Else Changed</title>
+    
 
-        {{ partial "sectionSpacer.html" (dict "sectionHeaderName" "") }}
 
-        <div class="aboutContainer">
-            <aside class="sideBar">
-                <ul class="sideBarList">
-                    <li><a href="#topLevelAboutBlock">About</a></li>
-                    <li><a href="theName">The Name</a></li>
-                    <li><a href="#theAuthor">The Author</a></li>
-                    <li><a href="#howItsMade">How It's Made</a></li>
-                </ul>
-                
-            </aside>
-
-            <div class="aboutBlock">
-                <div class="aboutContent" id="topLevelAboutBlock">
-                    <h2> Much Else Changed is an effort at explaining economic complexity without dumbing it down. Using data visualization, Much Else Changed breaks down important questions about policy and our society.</h2>
-                    <br>
-                    <p> Economics is an extraordinarily data-rich discipline but too often its public face looks like esoteric mathematics and Greek symbols that hide too much of the "story" from everyday readers. But, economics touches every person and almost every aspect of society so economic literacy in particular is important as literacy in general. Much Else Changed is an effort in advancing and popularizing the discourse of economics and policy.
-                    <p>
-                </div>
-                
-                {{ partial "sectionSpacer.html" (dict "sectionHeaderName" "") }}
-                    
-                <div class="aboutContent" id="theName">
-                    <h3>The Name</h3>
-                    <p>In economics the phrase <em>ceteris paribus</em> abounds. It means "all else equal" and is a useful framework for understanding how changing one variable can affect a bigger system. But, in reality, doing analysis in this way is difficult and sometimes conceals important truths.</p> 
-                    
-                    <p> Policy is inherently interdisciplinary. So, it often makes sense to understand what happens if <em>multiple</em> variables are changing all at the same time. That, additional level of complexity is what Much Else Changed is about. So this project's title is a reference to <em>ceteris paribus'</em> lesser-known brother: <em>mutatis mutandis</em>, which literally translates to "having changed what needs to be changed."</p>
-                </div>
-
-               
-                {{ partial "sectionSpacer.html" (dict "sectionHeaderName" "") }}
-                
-                <div class="aboutContent" id="theAuthor">
-                    <h3>The Author</h3>
-                    <p>Joshua Levy is presently a James Gaither Junior Fellow with the Carnegie Endowment for International Peace's Asian studies group. There he studies U.S.-China economic relations. Joshua is a graduate of Georgetown University's Edmund A. Walsh School of Foreign Service where he studied International Political Economy, Mathematics and Japanese. Though he was born in Tokyo, Japan, and grew up around the Asia-Pacific region before moving to the United States for university, Joshua considers Hong Kong home. </p>                    
-                </div>
-
-                {{ partial "sectionSpacer.html" (dict "sectionHeaderName" "") }}
-
-                <div class="aboutContent" id="howItsMade">
-                    <h3>How It's Made</h3>
-                    <p>Much Else Changed is made entirely with open-source software. As someone without a formal background in web-development, I found the following sources extraordinarily helpful for self-teaching. (Also, never forget that Google is your best friend!) </p>
-                </div>
-
-            </div>
+</head>
+        
+    </head>
+    <body>
+        
+            <header class="headerContainer">
+            
+    <a href="index.html">
+        <div id="pageTitle">
+            <img src="assets/social/logoLarge.svg" alt="MEC Logo">
+            <h1>Much Else Changed</h1>
         </div>
-    </main>
+    </a>
 
-{{ end }}
+    <nav class="topNav">
+        <ul class="navLinks">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/archives.html">Archives</a></li>
+        </ul>
+    </nav>
+</header>
+<hr>
+            
+<main>
+    <div class="content">
+        <div class="contentBody">
+            
+            <div class="sectionSpacer"></div>
+<h2 id="much-else-changed-is-an-effort-at-explaining-economic-complexity-without-dumbing-it-down-using-data-visualization-much-else-changed-breaks-down-important-questions-about-policy-and-our-society">Much Else Changed is an effort at explaining economic complexity without dumbing it down. Using data visualization, Much Else Changed breaks down important questions about policy and our society.</h2>
+<h3 id="economics-is-an-extraordinarily-data-rich-discipline-but-too-often-its-public-face-looks-like-esoteric-mathematics-and-greek-symbols-that-hide-too-much-of-the-story-from-everyday-readers-but-economics-touches-every-person-and-almost-every-aspect-of-society-so-economic-literacy-in-particular-is-as-important-as-literacy-in-general-much-else-changed-is-an-effort-in-advancing-and-popularizing-the-discourse-of-economics-and-policy">Economics is an extraordinarily data-rich discipline but too often its public face looks like esoteric mathematics and Greek symbols that hide too much of the &ldquo;story&rdquo; from everyday readers. But, economics touches every person and almost every aspect of society so economic literacy in particular is as important as literacy in general. Much Else Changed is an effort in advancing and popularizing the discourse of economics and policy.</h3>
+<div class="sectionSpacer"></div>
+<h4 id="the-name">The Name</h4>
+<p>In economics, the phrase <em>ceteris paribus</em> abounds. It means &ldquo;all else equal&rdquo; and is a useful framework for understanding how changing one variable can affect a bigger system. But, in reality, doing analysis in this way can conceal important truths. After all, the world doesn&rsquo;t change one variable at at time.</p>
+<p>Policy is inherently interdisciplinary. So, it often makes sense to understand what happens if <em>multiple</em> variables are changing all at the same time. That additional level of complexity is what Much Else Changed is all about. This project&rsquo;s title is a reference to <em>ceteris paribus&rsquo;s</em> lesser-known brother: <em>mutatis mutandis</em>, which literally translates to &ldquo;having changed what needs to be changed.&rdquo;</p>
+<div class="sectionSpacer"></div>
+<h4 id="the-author">The Author</h4>
+<p>Joshua Levy is presently a James Gaither Junior Fellow with the Carnegie Endowment for International Peace&rsquo;s Asia Program. There he studies U.S.-China economic relations. Joshua is a graduate of Georgetown University&rsquo;s Edmund A. Walsh School of Foreign Service where he studied International Political Economy, Mathematics, and Japanese. Though he was born in Tokyo, Japan, and grew up around the Asia-Pacific region before moving to the United States for university, Joshua considers Hong Kong home.</p>
+<div class="sectionSpacer"></div>
+<h4 id="how-its-made">How It&rsquo;s Made</h4>
+<p>Much Else Changed is made entirely with open-source software. Most things have been created with HTML, CSS, and a JavaScript library called d3.js. Additionally, Hugo is used as a framework with light CMS features. As someone without a formal background in web-development I am always open to tips, feedback, and suggestions. If you find any broken links or things that aren&rsquo;t working properly please let me know!</p>
+<div class="sectionSpacer"></div>
+
+            
+
+        </div>
+    </article>
+</main>
+
+            <footer>
+    <hr>
+
+    <div class="footerContainer">
+        <nav class="topNav">
+            <ul class="navLinks">
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="archives.html">Archives</a></li>
+            </ul>
+        </nav>
+
+    
+    </div>
+    
+    <div class="copyrightMast">
+        <p>A Joshua Levy Production</p>
+    </div>
+
+</footer>
+        
+    </body>
+
+</html>

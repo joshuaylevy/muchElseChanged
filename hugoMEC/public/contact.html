@@ -1,65 +1,142 @@
-{{ define "main" }}
-    <main>
-        <div class="contactContainer">
-            {{ partial "sectionSpacer.html" (dict "sectionHeaderName" "") }}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/social/mecFavIcon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="defaults.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link href="" rel="stylesheet">
+    
+    
+        
+    
+    <title>Contact | Much Else Changed</title>
+    
 
-            <div class="contactPrimaryBlock">
-                <p>Joshua is always happy to hear from other human beings! If you have any questions or queries you can reach him a number of different ways and he is (usually) pretty responsive. Feedback, tips, story ideas, and other cool things you find on the grand ol' internet are all welcomed!</p>
+
+</head>
+        
+    </head>
+    <body>
+        
+            <header class="headerContainer">
+            
+    <a href="index.html">
+        <div id="pageTitle">
+            <img src="assets/social/logoLarge.svg" alt="MEC Logo">
+            <h1>Much Else Changed</h1>
+        </div>
+    </a>
+
+    <nav class="topNav">
+        <ul class="navLinks">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/archives.html">Archives</a></li>
+        </ul>
+    </nav>
+</header>
+<hr>
+            
+<main>
+    <div class="content">
+        <div class="contentBody">
+            
+            <div class="contactContainer">
+    <div class="sectionSpacer">
+    <h3>  </h3>
+</div>
+
+    <div class="contactPrimaryBlock">
+        <p>Joshua is always happy to hear from other human beings! If you have any questions or queries you can reach him a number of different ways and he is (usually) pretty responsive. Feedback, tips, story ideas, and other cool things you find on the grand ol' internet are all welcomed!</p>
+    </div>
+
+    <div class="sectionSpacer">
+    <h3>  </h3>
+</div>
+
+    <div class="contactBlockContainer">
+        <h3>Newsletter & Contact Form</h3>
+        <form class="contactEmailForm" action="">
+            <div class="contactEmailBlock">
+                <input type="text" id="fname" placeholder="First Name*">
+                <input type="text" id="lname" placeholder="Last Name*">
             </div>
-
-            {{ partial "sectionSpacer.html" (dict "sectionHeaderName" "") }}
-
-            <div class="contactBlockContainer">
-                <h3>Newsletter & Contact Form</h3>
-                <form class="contactEmailForm" action="">
-                    <div class="contactEmailBlock">
-                        <input type="text" id="fname" placeholder="First Name*">
-                        <input type="text" id="lname" placeholder="Last Name*">
-                    </div>
-                    
-                    <div class="contactEmailBlock">
-                        <input type="email" id="emailAddress" placeholder="E-mail Address">
-                    </div>
-                        
-                    <div class="contactEmailBlock">
-                        <textarea id="formSubmissionText" placeholder="Your message" style="display:inline-block"></textarea>
-                    </div>
-                    <div class="contactEmailBlock">
-                        <label class="checkboxLabel">
-                            I want to subscribe to the Much Else Changed newsletter
-                            <input type="checkbox">
-                            <span class="checkmarkCustom"></span>
-                        </label>
-                    </div>
-                    <div class="contactEmailBlock">
-                        <input type="submit" value="Submit">
-                    </div>
-                </form>
-
+            
+            <div class="contactEmailBlock">
+                <input type="email" id="emailAddress" placeholder="E-mail Address*">
             </div>
-
-            {{ partial "sectionSpacer.html" (dict "sectionHeaderName" "") }}
-
-            <div class="contactBlockContainer">
-                <div class="contactSocialBlock" style="height:300px">
-                    <h3>Follow</h3>
-                    <p style="text-align: left; font-size: 1.25rem; padding-bottom: 1rem;">You can also follow Much Else Changed on social media to keep up with what's changing!</p>
-                    <div id="socialSVGs">
-                        <a href="https://facebook.com">
-                            <img src="assets/social/facebook.svg" alt="facebook logo svg">
-                        </a>
-                        <a href="https://twitter.com">
-                            <img src="assets/social/twitter.svg" alt="twitter logo svg">
-                        </a>
-                        <a href="https://instagram.com">
-                            <img src="assets/social/instagram.svg" alt="instagram logo svg">
-                        </a>
-                    </div>
-                </div>
+                
+            <div class="contactEmailBlock">
+                <textarea id="formSubmissionText" placeholder="Your message" style="display:inline-block"></textarea>
             </div>
+            <div class="contactEmailBlock">
+                <label class="checkboxLabel">
+                    I want to subscribe to the Much Else Changed newsletter
+                    <input type="checkbox">
+                    <span class="checkmarkCustom"></span>
+                </label>
+            </div>
+            <div class="contactEmailBlock">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+
+    </div>
+
+    <div class="sectionSpacer">
+    <h3>  </h3>
+</div>
+
+    <div class="contactBlockContainer">
+        <div class="contactSocialBlock" style="height:300px">
+            <h3>Follow</h3>
+            <p style="text-align: left; font-size: 1.25rem; padding-bottom: 1rem;">You can also follow Much Else Changed on social media to keep up with what's changing!</p>
+            <div id="socialSVGs">
+                <a href="https://facebook.com">
+                    <img src="assets/social/facebook.svg" alt="facebook logo svg">
+                </a>
+                <a href="https://twitter.com">
+                    <img src="assets/social/twitter.svg" alt="twitter logo svg">
+                </a>
+                <a href="https://instagram.com">
+                    <img src="assets/social/instagram.svg" alt="instagram logo svg">
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+            
 
         </div>
+    </article>
+</main>
 
-    </main> 
-{{ end }}
+            <footer>
+    <hr>
 
+    <div class="footerContainer">
+        <nav class="topNav">
+            <ul class="navLinks">
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="archives.html">Archives</a></li>
+            </ul>
+        </nav>
+
+    
+    </div>
+    
+    <div class="copyrightMast">
+        <p>A Joshua Levy Production</p>
+    </div>
+
+</footer>
+        
+    </body>
+
+</html>

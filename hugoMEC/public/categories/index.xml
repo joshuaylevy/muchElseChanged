@@ -6,9 +6,55 @@
     <description>Recent content in Categories on Much Else Changed</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 22 Jun 2020 13:30:22 -0400</lastBuildDate>
     
 	<atom:link href="https://muchelsechanged.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>static</title>
+      <link>https://muchelsechanged.com/categories/static/</link>
+      <pubDate>Mon, 22 Jun 2020 13:30:22 -0400</pubDate>
+      
+      <guid>https://muchelsechanged.com/categories/static/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>archives</title>
+      <link>https://muchelsechanged.com/categories/archives/</link>
+      <pubDate>Fri, 19 Jun 2020 22:11:29 -0400</pubDate>
+      
+      <guid>https://muchelsechanged.com/categories/archives/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>article</title>
+      <link>https://muchelsechanged.com/categories/article/</link>
+      <pubDate>Tue, 16 Jun 2020 18:17:52 -0400</pubDate>
+      
+      <guid>https://muchelsechanged.com/categories/article/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>featured</title>
+      <link>https://muchelsechanged.com/categories/featured/</link>
+      <pubDate>Tue, 16 Jun 2020 18:17:52 -0400</pubDate>
+      
+      <guid>https://muchelsechanged.com/categories/featured/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>recommended</title>
+      <link>https://muchelsechanged.com/categories/recommended/</link>
+      <pubDate>Tue, 16 Jun 2020 18:17:52 -0400</pubDate>
+      
+      <guid>https://muchelsechanged.com/categories/recommended/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

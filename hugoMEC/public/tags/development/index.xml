@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>development on Much Else Changed</title>
+    <link>https://muchelsechanged.com/tags/development/</link>
+    <description>Recent content in development on Much Else Changed</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 Jun 2020 18:17:52 -0400</lastBuildDate>
+    
+	<atom:link href="https://muchelsechanged.com/tags/development/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Recommended Article 1</title>
+      <link>https://muchelsechanged.com/recommendedarticle1.html</link>
+      <pubDate>Tue, 16 Jun 2020 18:17:52 -0400</pubDate>
+      
+      <guid>https://muchelsechanged.com/recommendedarticle1.html</guid>
+      <description>here is some content for top four article 1</description>
+    </item>
+    
+  </channel>
+</rss>

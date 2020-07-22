@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Much Else Changed</title>
-    <link>https://muchelsechanged.com/</link>
-    <description>Recent content on Much Else Changed</description>
+    <title>static on Much Else Changed</title>
+    <link>https://muchelsechanged.com/categories/static/</link>
+    <description>Recent content in static on Much Else Changed</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 22 Jun 2020 13:30:22 -0400</lastBuildDate>
     
-	<atom:link href="https://muchelsechanged.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://muchelsechanged.com/categories/static/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -34,48 +34,12 @@
     </item>
     
     <item>
-      <title>ArchiveScalerTest</title>
-      <link>https://muchelsechanged.com/scalertest.html</link>
-      <pubDate>Fri, 19 Jun 2020 22:11:29 -0400</pubDate>
-      
-      <guid>https://muchelsechanged.com/scalertest.html</guid>
-      <description>here is some text as a test</description>
-    </item>
-    
-    <item>
       <title>about page</title>
       <link>https://muchelsechanged.com/about.html</link>
       <pubDate>Tue, 16 Jun 2020 18:17:52 -0400</pubDate>
       
       <guid>https://muchelsechanged.com/about.html</guid>
       <description>Much Else Changed is an effort at explaining economic complexity without dumbing it down. Using data visualization, Much Else Changed breaks down important questions about policy and our society. Economics is an extraordinarily data-rich discipline but too often its public face looks like esoteric mathematics and Greek symbols that hide too much of the &amp;ldquo;story&amp;rdquo; from everyday readers. But, economics touches every person and almost every aspect of society so economic literacy in particular is as important as literacy in general.</description>
-    </item>
-    
-    <item>
-      <title>Recommended Article 1</title>
-      <link>https://muchelsechanged.com/recommendedarticle1.html</link>
-      <pubDate>Tue, 16 Jun 2020 18:17:52 -0400</pubDate>
-      
-      <guid>https://muchelsechanged.com/recommendedarticle1.html</guid>
-      <description>here is some content for top four article 1</description>
-    </item>
-    
-    <item>
-      <title>Recommended Article 2</title>
-      <link>https://muchelsechanged.com/recommendedarticle2.html</link>
-      <pubDate>Tue, 16 Jun 2020 18:17:52 -0400</pubDate>
-      
-      <guid>https://muchelsechanged.com/recommendedarticle2.html</guid>
-      <description>here is some content for top four article 2</description>
-    </item>
-    
-    <item>
-      <title>SAC Mismanages Student Activities Fee</title>
-      <link>https://muchelsechanged.com/sac-mismanages-student-fee.html</link>
-      <pubDate>Tue, 16 Jun 2020 18:17:52 -0400</pubDate>
-      
-      <guid>https://muchelsechanged.com/sac-mismanages-student-fee.html</guid>
-      <description>Inadequate accounting safeguards, poor record-keeping practices, and abuse of power led to tens of thousands of dollars of overspending by the Student Activities Commission.  The Student Activities Commission, a board composed of __ students, overspent its allocated budget by more than $40,000 in the 2019-20 academic year because of insufficient record-keeping and irresponsible accounting practices. Further compounded by abuse of funding authority, SAC spending outstripped its budget with more than three months remaining the in the school year.</description>
     </item>
     
   </channel>

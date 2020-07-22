@@ -175,7 +175,12 @@ footer{
     display: inline-block;
 }
 
-.topNav{
+.footerContainer{
+    text-align: right;
+}
+
+
+ul .topNav{
     flex: 1 1 auto;
     overflow: auto;
     text-align: right;
@@ -245,23 +250,35 @@ hr {
     max-width: 100%;
 }
 
-.featuredArticleImg{
+.featuredBox ul li .articleCard{
+    display: flex;
+    justify-content: flex-start;
+    overflow: auto;
+    max-width: 100%;
+}
+
+.featuredBox .articleImg{
     display: inline-block;
     width: 65%;
 }
 
-.featuredArticleImage{
+.featuredBox .articleImageDS{
+    display: none;
+}
+
+.articleImage{
     width: 100%;
 }
 
-.featuredArticleInfo{
+.featuredBox .articleInfo{
     display: inline-block;
     padding-top: 0rem;
     padding-left: 1rem;
     flex: 4 4 auto;
+    vertical-align: top;
 }
 
-.topFourBox{
+.topFourBox ul {
     display: flex;
     justify-content: space-between;
     overflow: auto;
@@ -269,24 +286,21 @@ hr {
     max-width: 100%;
 }
 
-.halfWidthBox{
+.topFourBox ul li {
     display: inline-block;
     width: 48%;
-    font-size: 15px;
 }
 
-.topFourImg{
+.topFourBox .articleCard{
     display: inline-block;
     width: 100%;
-    content: url(assets/placeHolderHalf.jpg);
 }
 
-.topFourInfo{
-    padding-top: 1em;
-    padding-bottom: 1em;
+.topFourBox .articleInfo{
+    padding: 1rem 0;
 }
 
-.listBox{
+.archivesBox ul {
     display: flex;
     justify-content: space-between;
     overflow: auto;
@@ -294,21 +308,17 @@ hr {
     max-width: 100%;
 }
 
-.thirdWidthBox{
+.archivesBox ul li {
     display: inline-block;
     width: 31%;
-    font-size: 14px;
 }
 
-.thirdWidthImg{
-    display: inline-block;
-    width: 100%;
-    content: url(assets/placeHolderHalf.jpg)
+.archivesBox .articleInfo{
+    padding: 0.75rem 0;
 }
 
-.thirdWidthInfo{
-    padding-top: 1em;
-    padding-bottom: 1em;
+.archivesBox .articleDescription{
+    display: none;
 }
 
 .emailSocialBar{
@@ -381,7 +391,6 @@ hr {
 .sideBarList li{
     margin-bottom: 0.75rem;
 }
-
 
 .aboutBlock{
     display: inline-block;
@@ -628,6 +637,14 @@ hr {
     color: var(--yale-blue);
 }
 
+.archivesBox .headline{
+    font-family: "Robot", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    padding-bottom: 0.25rem;
+}
+
+
 .byLine{
     font-family: "Roboto", sans-serif;
     font-size: 1rem;
@@ -660,37 +677,34 @@ hr {
         display: none;
     }
 
-    .featuredBox{
+    .featuredBox .articleCard{
         flex-wrap: wrap;
     }
 
-    .featuredArticleInfo{
-        padding: 15px 0px;
+    .featuredBox .articleImg{
+        width: 100%;
+    }
+
+    .featuredBox .articleInfo{
+        padding: 1rem 0;
     }
     
-    .featuredArticleImage{
+    .topFourBox ul li{
         width: 100%;
     }
 
-    .featuredArticleImg{
+    .topFourBox .articleInfo{
+        padding: 1rem 0;
+    }
+
+    .archivesBox ul li{
         width: 100%;
     }
 
-    .halfWidthBox{
-        width: 100%;
+    .archivesBox .articleInfo{
+        padding: 1rem 0;
     }
 
-    .topFourImg{
-        content: url(assets/placeHolderImage.jpg)
-    }
-
-    .thirdWidthBox{
-        width:100%;
-    }
-
-    .thirdWidthImg{
-        content: url(assets/placeHolderImage.jpg)
-    }
 }
 
 @media (max-width: 600px) {

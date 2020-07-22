@@ -3,15 +3,98 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://muchelsechanged.com/archives.html</loc>
+    <lastmod>2020-06-22T13:30:22-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://muchelsechanged.com/categories/</loc>
+    <lastmod>2020-06-22T13:30:22-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://muchelsechanged.com/</loc>
+    <lastmod>2020-06-22T13:30:22-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://muchelsechanged.com/categories/static/</loc>
+    <lastmod>2020-06-22T13:30:22-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://muchelsechanged.com/contact.html</loc>
+    <lastmod>2020-06-22T13:12:28-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://muchelsechanged.com/categories/archives/</loc>
+    <lastmod>2020-06-19T22:11:29-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://muchelsechanged.com/scalertest.html</loc>
+    <lastmod>2020-06-19T22:11:29-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://muchelsechanged.com/tags/</loc>
+    <lastmod>2020-06-19T22:11:29-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://muchelsechanged.com/tags/trade/</loc>
+    <lastmod>2020-06-19T22:11:29-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://muchelsechanged.com/about.html</loc>
+    <lastmod>2020-06-16T18:17:52-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://muchelsechanged.com/categories/article/</loc>
+    <lastmod>2020-06-16T18:17:52-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://muchelsechanged.com/tags/development/</loc>
+    <lastmod>2020-06-16T18:17:52-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://muchelsechanged.com/categories/featured/</loc>
+    <lastmod>2020-06-16T18:17:52-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://muchelsechanged.com/tags/finance/</loc>
+    <lastmod>2020-06-16T18:17:52-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://muchelsechanged.com/tags/public/</loc>
+    <lastmod>2020-06-16T18:17:52-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://muchelsechanged.com/categories/recommended/</loc>
+    <lastmod>2020-06-16T18:17:52-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://muchelsechanged.com/recommendedarticle1.html</loc>
+    <lastmod>2020-06-16T18:17:52-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://muchelsechanged.com/recommendedarticle2.html</loc>
+    <lastmod>2020-06-16T18:17:52-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://muchelsechanged.com/sac-mismanages-student-fee.html</loc>
+    <lastmod>2020-06-16T18:17:52-04:00</lastmod>
   </url>
   
 </urlset>
