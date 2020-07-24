@@ -225,6 +225,18 @@ hr {
     margin-bottom: 10px;
 }
 
+.topTitleLogoContainer{
+    text-align: center;
+    padding: 10px;
+}
+
+.topTitleLogoContainer h2{
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    font-size: 2.75rem;
+    font-weight: 500;
+}
+
 
 h1{
     font-family: "LindenHill", serif;
@@ -273,7 +285,7 @@ p{
     position: absolute;
     padding: 10px;
     border: 1px solid black;
+    border-radius: 4px;
     text-align: center;
-    opacity: 0;
 }
 /* here is another change */

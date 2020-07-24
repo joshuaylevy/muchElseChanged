@@ -6,7 +6,9 @@ const CHART_WIDTH = 800 - MARGINS.left - MARGINS.right;
 const CHART_HEIGHT = 200 - MARGINS.top - MARGINS.bottom;
 const colors = ["0a5282","e0e0e2","81d2c7","b5bad0","e85f5c","7599b2","b1d9d5","9bc6cc","cf8d96","ea6e6b"];
 
+// formats (large) numbers to have commas for ease of reading
 
+commaFormat = d3.format(',')
 const data = d3.csv('assets/posts/sacMismanagement/FinAppFY19-20Allocations.csv').then(
     data => {
 
@@ -34,7 +36,7 @@ const data = d3.csv('assets/posts/sacMismanagement/FinAppFY19-20Allocations.csv'
                 Applicant: d.Applicant,
                 Funding: d.Funding,
                 cumulative: cumulative  - d.Funding,
-                percent: percent(d.Funding)
+                percent: percent(d.Funding),
             }
         });
     
@@ -51,13 +53,6 @@ const data = d3.csv('assets/posts/sacMismanagement/FinAppFY19-20Allocations.csv'
             .attr('viewBox', '0 0 ' + (CHART_WIDTH + MARGINS.left + MARGINS.right) + ' 200');
         const chart = chartContainer.append('g');
 
-        // creating tooltip div
-        const tooltipdiv = d3.select('#finAppBarChart')
-            .append('div')
-            .classed('tooltipdiv', true);
-
-        tooltipdiv.text('here is some text');
-
         // creating bars
         chart.selectAll('.bar')
             .data(data)
@@ -72,10 +67,9 @@ const data = d3.csv('assets/posts/sacMismanagement/FinAppFY19-20Allocations.csv'
                 .style('fill', (d,i) => colors[i])
             .on('mouseover', function(d){
                 name = d.Applicant;
-                //one-sided margin
-                let BODY_MARGINS = (d3.select('body').node().getBoundingClientRect().width - d3.select('.content').node().getBoundingClientRect().width) / 2;
+                funding = commaFormat(d.Funding);
                 d3.select('.tooltipdiv')
-                    .html(name)
+                    .html(name + ": $" + funding)
                     //appear
                     .style('opacity', 1)
                     //take all margins and viewport into account
@@ -101,12 +95,62 @@ const data = d3.csv('assets/posts/sacMismanagement/FinAppFY19-20Allocations.csv'
                         yOffSet = window.pageYOffset;
                         return (yOffSet + rectY - 50) + 'px';
                     });
-            })
-            .on('mouseout', function(d){
-                //disappear 
-                d3.select('.tooltipdiv')
-                    .style('opacity', 0);
             });
+
+        //creating actual axes based on theoretical scales
+        const bottomAxis = d3.axisTop (xScale)
+            .ticks(0);
+
+        //attaching axis to chart
+        chart.append('g')
+            .attr('transform', `translate(${MARGINS.left}, ${CHART_HEIGHT - 30})`)
+            .call(bottomAxis);
+
+        //total FinApp expenditures label
+        chart.append('text')
+            .attr('transform', `translate(${(CHART_WIDTH / 2) + MARGINS.left }, ${CHART_HEIGHT - 10})`)
+            .attr('x', (d3.select('body').clientWidth))
+            .style('text-anchor', 'middle')
+            .text('Total: $ NEED TO PUT IN A NUMBER HERE');
+
+        // creating tooltip div
+        const tooltipdiv = d3.select('#finAppBarChart')
+        .append('div')
+        .classed('tooltipdiv', true)
+        //creating default positioning for tooltip
+        .data(data)
+        .html(function(){
+            rect = d3.selectAll('.bar')
+                .filter(function(){
+                    return d3.select(this).attr('data-Applicant') == 'SAC';
+                })
+            name = rect.data()[0].Applicant;
+            funding = commaFormat(rect.data()[0].Funding);
+            return name + ": $" + funding;
+        })
+        .style('left', function(){
+            rect = d3.selectAll('.bar')
+                .attr('data-Applicant', d => d.Applicant)
+                .filter(function() {
+                    return d3.select(this).attr('data-Applicant') == 'SAC';
+                })
+                .node().getBoundingClientRect();
+            rectX = rect.x;
+            rectWidth = rect.width;
+            rectXMid = rectX + (rectWidth / 2);
+            tipShift = parseInt(d3.select(this).style('width')) / 2;
+            return (rectXMid - tipShift) + 'px';
+        })
+        .style('top', function(){
+            rect = d3.selectAll('.bar')
+                .filter(function(){
+                    return d3.select(this).attr('data-Applicant') == 'SAC';
+                })
+                .node().getBoundingClientRect();
+            rectY = rect.y;
+            yOffSet = window.pageYOffset;
+            return (yOffSet + rectY - 50) + 'px';
+        });
     }
 );
         

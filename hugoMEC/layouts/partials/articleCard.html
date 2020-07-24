@@ -10,7 +10,7 @@
             <a href={{ .Params.Url }}>
                 <img class="articleImage"
                 srcset="{{ .Params.cardImg }} 1280w, {{ $resizedSmall.RelPermalink }} 200w, {{ $resizedMedium.RelPermalink }} 600w, {{ $resizedLarge.RelPermalink }} 800w "
-                sizes="(max-width: 800px) 1200px, 200px, 600px, 800px"
+                sizes="(min-width: 800px) 1200px, 200px, 600px, 800px"
                 src="{{ .Params.cardImg }}">
             </a>
         </div>
