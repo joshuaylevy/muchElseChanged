@@ -1,9 +1,10 @@
-const MARGINS = {top: 10, bottom: 10, right: 50, left: 50};
+const MARGINS = {top: 0, bottom: 0, right: 50, left: 50};
 const BODY_WIDTH = d3.select('.contentBody').node().getBoundingClientRect().width;
+const BAR_THICK = 60;
 
 // const CHART_WIDTH = parseInt(BODY_WIDTH);
 const CHART_WIDTH = 800 - MARGINS.left - MARGINS.right;
-const CHART_HEIGHT = 200 - MARGINS.top - MARGINS.bottom;
+const CHART_HEIGHT = 220 - MARGINS.top - MARGINS.bottom;
 const colors = ["0a5282","e0e0e2","81d2c7","b5bad0","e85f5c","7599b2","b1d9d5","9bc6cc","cf8d96","ea6e6b"];
 
 // formats (large) numbers to have commas for ease of reading
@@ -11,7 +12,6 @@ const colors = ["0a5282","e0e0e2","81d2c7","b5bad0","e85f5c","7599b2","b1d9d5","
 commaFormat = d3.format(',')
 const data = d3.csv('assets/posts/sacMismanagement/FinAppFY19-20Allocations.csv').then(
     data => {
-
         // turning strings into num
         data.forEach(function(d) {
             d.Funding = +d.Funding;
@@ -50,7 +50,7 @@ const data = d3.csv('assets/posts/sacMismanagement/FinAppFY19-20Allocations.csv'
             .append('svg')
             .classed('container', true)
             .attr('preserveAspectRatio', 'xMidYMid meet')
-            .attr('viewBox', '0 0 ' + (CHART_WIDTH + MARGINS.left + MARGINS.right) + ' 200');
+            .attr('viewBox', '0 0 ' + (CHART_WIDTH + MARGINS.left + MARGINS.right) + ' 220');
         const chart = chartContainer.append('g');
 
         // creating bars
@@ -60,9 +60,9 @@ const data = d3.csv('assets/posts/sacMismanagement/FinAppFY19-20Allocations.csv'
             .append('rect')
             .classed('bar', true)
                 .attr('x', d => xScale(d.cumulative) + MARGINS.left)
-                .attr('y', (CHART_HEIGHT / 2) - (30) )
+                .attr('y', (CHART_HEIGHT / 2) - (BAR_THICK / 2) )
                 .attr('width', d => xScale(d.Funding))
-                .attr('height', 60)
+                .attr('height', BAR_THICK)
                 .attr('data-Applicant', d => d.Applicant)
                 .style('fill', (d,i) => colors[i])
             .on('mouseover', function(d){
@@ -103,16 +103,38 @@ const data = d3.csv('assets/posts/sacMismanagement/FinAppFY19-20Allocations.csv'
 
         //attaching axis to chart
         chart.append('g')
-            .attr('transform', `translate(${MARGINS.left}, ${CHART_HEIGHT - 30})`)
+            .attr('transform', `translate(${MARGINS.left}, ${CHART_HEIGHT - 40})`)
             .call(bottomAxis);
 
         //total FinApp expenditures label
         chart.append('text')
-            .attr('transform', `translate(${(CHART_WIDTH / 2) + MARGINS.left }, ${CHART_HEIGHT - 10})`)
+            .attr('transform', `translate(${(CHART_WIDTH / 2) + MARGINS.left }, ${CHART_HEIGHT})`)
             .attr('x', (d3.select('body').clientWidth))
             .style('text-anchor', 'middle')
-            .text('Total: $ NEED TO PUT IN A NUMBER HERE');
+            .text('Total: $1,092,000');
 
+        // chart title
+        const title = d3.select('#finAppBarChart').append('div');
+        function titlePlacement(){
+            title
+            .classed('chartTitle', true)
+            // .style('transform', `translate(${MARGINS.left}, 12)`)
+            .style('font-family', '"Roboto", sans-serif')
+            .style('font-weight', 'bold')
+            .style('left', function(){
+                rect = d3.selectAll('.bar')
+                    .filter(function(){
+                        return d3.select(this).attr('data-Applicant') == 'SAC';
+                    })
+                    .node().getBoundingClientRect();
+                rectLeft = rect.left;
+                return rectLeft + 'px';
+            })
+            .text('2019-20 GUSA FinApp Funding Allocation');
+        }
+        titlePlacement()
+        window.onresize = titlePlacement;
+    
         // creating tooltip div
         const tooltipdiv = d3.select('#finAppBarChart')
         .append('div')

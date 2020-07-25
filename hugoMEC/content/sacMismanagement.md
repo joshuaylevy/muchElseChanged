@@ -29,7 +29,11 @@ SAC, officially a part of the Vice President's Office for Student Affairs, recei
 
 {{< includeJS path="assets/posts/sacMismanagement/finAppNormalizedBar.js" id="finAppBarChart" >}}
 
-this is another change solely for the purpose of testing netlify
+Over the past decade, SAC has seen the amount of funding that it receives from FinApp increase dramatically. Though the functions of the various groups that apply for FinApp funding have changed over time, the amount of funding that SAC received increased by over 25% in the past five years and has nearly tripled since the 2011-12 academic year. Indeed, in the past academic year, SAC received more funding from FinApp than any other group has for as long as records are available.
+
+In addition to funding from FinApp, however, SAC also received funding directly from the Vice President's Office for Student Affairs to the tune of $84,000 and a further $8,800 in a grant award from the Coca Cola Foundation. (The Hoya - need to fact check the Coke number)
+
+SAC
 
 {{< sectionSpacerSC >}}
 {{< sectionSpacerSC >}}
