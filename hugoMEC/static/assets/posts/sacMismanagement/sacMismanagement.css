@@ -282,12 +282,26 @@ p{
     border: 1px solid black;
     border-radius: 4px;
     text-align: center;
+    opacity: 1;
+}
+
+@media (max-width: 800px){
+    .tooltipdiv{
+       display: inline;
+       position: absolute;
+       opacity: 0.99;
+    }
 }
 
 .chartTitle{
     display: inline;
     position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
+
+
+
 
 .chartTitle::after{
     content: "";

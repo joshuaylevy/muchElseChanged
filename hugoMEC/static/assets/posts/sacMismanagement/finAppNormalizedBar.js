@@ -4,7 +4,7 @@ const BAR_THICK = 60;
 
 // const CHART_WIDTH = parseInt(BODY_WIDTH);
 const CHART_WIDTH = 800 - MARGINS.left - MARGINS.right;
-const CHART_HEIGHT = 220 - MARGINS.top - MARGINS.bottom;
+const CHART_HEIGHT = 275 - MARGINS.top - MARGINS.bottom;
 const colors = ["0a5282","e0e0e2","81d2c7","b5bad0","e85f5c","7599b2","b1d9d5","9bc6cc","cf8d96","ea6e6b"];
 
 // formats (large) numbers to have commas for ease of reading
@@ -50,7 +50,7 @@ const data = d3.csv('assets/posts/sacMismanagement/FinAppFY19-20Allocations.csv'
             .append('svg')
             .classed('container', true)
             .attr('preserveAspectRatio', 'xMidYMid meet')
-            .attr('viewBox', '0 0 ' + (CHART_WIDTH + MARGINS.left + MARGINS.right) + ' 220');
+            .attr('viewBox', '0 0 ' + (CHART_WIDTH + MARGINS.left + MARGINS.right) + ' 275');
         const chart = chartContainer.append('g');
 
         // creating bars
@@ -70,9 +70,6 @@ const data = d3.csv('assets/posts/sacMismanagement/FinAppFY19-20Allocations.csv'
                 funding = commaFormat(d.Funding);
                 d3.select('.tooltipdiv')
                     .html(name + ": $" + funding)
-                    //appear
-                    .style('opacity', 1)
-                    //take all margins and viewport into account
                     .style('left', function(){
                         rect = d3.selectAll('.bar')
                             .filter(function(){
@@ -83,7 +80,21 @@ const data = d3.csv('assets/posts/sacMismanagement/FinAppFY19-20Allocations.csv'
                         rectWidth = rect.width;
                         rectXMid = rectX + (rectWidth / 2);
                         tipShift = parseInt(d3.select(this).style('width')) / 2;
-                        return (rectXMid - tipShift) + 'px';
+                        if (d3.select('.tooltipdiv').style('opacity') == 1){
+                            //desktop mode, horizontally floating tooltip
+                            return (rectXMid - tipShift) + 'px';        
+                        } else {
+                            SACRect = d3.selectAll('.bar')
+                                .filter(function() {
+                                    return d3.select(this).attr('data-Applicant') == 'SAC';
+                                })
+                            .node().getBoundingClientRect();
+                            SACRectX = SACRect.x;
+                            SACrRectWidth = SACRect.width;
+                            tipShift = parseInt(d3.select(this).style('width')) / 2;
+                            console.log('1')
+                            return (SACRectX) + 'px';
+                        }
                     })
                     .style('top', function(){
                         rect = d3.selectAll('.bar')
@@ -93,7 +104,13 @@ const data = d3.csv('assets/posts/sacMismanagement/FinAppFY19-20Allocations.csv'
                             .node().getBoundingClientRect();
                         rectY = rect.y;
                         yOffSet = window.pageYOffset;
-                        return (yOffSet + rectY - 50) + 'px';
+                        
+                        if (d3.select('.tooltipdiv').style('opacity') == 1) {
+                            // desktop mode, horizontally floating tooltip
+                            return (yOffSet + rectY - 50) + 'px';
+                        } else {
+                            return (yOffSet + rectY + 50) + 'px';
+                        }
                     });
             });
 
@@ -103,12 +120,12 @@ const data = d3.csv('assets/posts/sacMismanagement/FinAppFY19-20Allocations.csv'
 
         //attaching axis to chart
         chart.append('g')
-            .attr('transform', `translate(${MARGINS.left}, ${CHART_HEIGHT - 40})`)
+            .attr('transform', `translate(${MARGINS.left}, ${CHART_HEIGHT - 80})`)
             .call(bottomAxis);
 
         //total FinApp expenditures label
         chart.append('text')
-            .attr('transform', `translate(${(CHART_WIDTH / 2) + MARGINS.left }, ${CHART_HEIGHT})`)
+            .attr('transform', `translate(${(CHART_WIDTH / 2) + MARGINS.left }, ${CHART_HEIGHT - 55})`)
             .attr('x', (d3.select('body').clientWidth))
             .style('text-anchor', 'middle')
             .text('Total: $1,092,000');
@@ -118,9 +135,6 @@ const data = d3.csv('assets/posts/sacMismanagement/FinAppFY19-20Allocations.csv'
         function titlePlacement(){
             title
             .classed('chartTitle', true)
-            // .style('transform', `translate(${MARGINS.left}, 12)`)
-            .style('font-family', '"Roboto", sans-serif')
-            .style('font-weight', 'bold')
             .style('left', function(){
                 rect = d3.selectAll('.bar')
                     .filter(function(){
@@ -152,16 +166,23 @@ const data = d3.csv('assets/posts/sacMismanagement/FinAppFY19-20Allocations.csv'
         })
         .style('left', function(){
             rect = d3.selectAll('.bar')
-                .attr('data-Applicant', d => d.Applicant)
-                .filter(function() {
-                    return d3.select(this).attr('data-Applicant') == 'SAC';
-                })
-                .node().getBoundingClientRect();
+                    .attr('data-Applicant', d => d.Applicant)
+                    .filter(function() {
+                        return d3.select(this).attr('data-Applicant') == 'SAC';
+                    })
+                    .node().getBoundingClientRect();
             rectX = rect.x;
             rectWidth = rect.width;
             rectXMid = rectX + (rectWidth / 2);
             tipShift = parseInt(d3.select(this).style('width')) / 2;
-            return (rectXMid - tipShift) + 'px';
+            //check if we are on mobile or desktop size
+            if (d3.select('.tooltipdiv').style('opacity') === 1){
+                // desktop mode, tooltip immediately below title
+                return (rectXMid - tipShift) + 'px';
+            } else {
+                // mobile mode, tooltip below graph and axis label
+                return rectX + 'px';
+            }
         })
         .style('top', function(){
             rect = d3.selectAll('.bar')
@@ -169,9 +190,17 @@ const data = d3.csv('assets/posts/sacMismanagement/FinAppFY19-20Allocations.csv'
                     return d3.select(this).attr('data-Applicant') == 'SAC';
                 })
                 .node().getBoundingClientRect();
-            rectY = rect.y;
-            yOffSet = window.pageYOffset;
-            return (yOffSet + rectY - 50) + 'px';
+                rectY = rect.y;
+                yOffSet = window.pageYOffset;
+            if (d3.select('.tooltipdiv').style('opacity') === '1'){
+                // desktop mode, tooltip immediately below title
+                return (yOffSet + rectY - 50) + 'px';
+            } else {
+                //mobile mode, tooltip below graph and axis label
+                return (yOffSet + rectY + 50) + 'px';
+            }
+
+            
         });
     }
 );
