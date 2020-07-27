@@ -285,7 +285,7 @@ p{
     opacity: 1;
 }
 
-@media (max-width: 800px){
+@media (max-width: 600px){
     .tooltipdiv{
        display: inline;
        position: absolute;
@@ -300,9 +300,6 @@ p{
     font-weight: bold;
 }
 
-
-
-
 .chartTitle::after{
     content: "";
     display: block;
@@ -314,4 +311,9 @@ p{
     width: 3rem;
     margin: 0.25rem 0;
     background: var(--yale-blue)
+}
+
+.tick text{
+    font-family: 'LindenHill', serif;
+    font-size: 12px;
 }
