@@ -90,7 +90,7 @@ const line_data = d3.csv('assets/posts/sacMismanagement/SACYearOnYearFYChanges.c
 
         //line title
         const title = d3.select('#sacYearOnYearLine').append('div');
-        function titlePlacement(){
+        function titlePlacementLine(){
             title
                 .classed('chartTitle', true)
                 .style('left', function(){
@@ -98,15 +98,33 @@ const line_data = d3.csv('assets/posts/sacMismanagement/SACYearOnYearFYChanges.c
                         .filter(function(){
                             return d3.select(this).attr('opacity') == 0;
                         })
-                        .node().getBoundingClientRect()
+                        .node().getBoundingClientRect();
                     return yAxisCoords.x + 'px';
                 })
-                .text('SAC Funds Appropriated by GUSA FinApp');               
+                .style('top', function(){
+                    if (window.innerWidth <= 600){
+                        yAxisCoords = d3.selectAll('.domain')
+                        .filter(function(){
+                            return d3.select(this).attr('opacity') == 0;
+                        })
+                        .node().getBoundingClientRect();
+                        yAxisCoordsY = yAxisCoords.y;
+                        yOffset = window.pageYOffset;
+                        return  yAxisCoordsY + yOffset - 40 + 'px';
+                    }
+                })
+                .text('SAC Funds Appropriated by GUSA FinApp');       
         }
-        titlePlacement()
-        window.onresize = titlePlacement;
+        titlePlacementLine()
+
+        //THIS LITTLE SNIPPET ALWAYS GOES IN THE BOTTOM-MOST SCRIPT IT ALLOWS FOR RESPONSE WINDOW RESIZES
+        function onresizeFunctions(){
+
+            titlePlacementLine();
+            dataFunc.titlePlacementBar();
+        }
+        window.onresize = onresizeFunctions;
     }
 
     
 );
-

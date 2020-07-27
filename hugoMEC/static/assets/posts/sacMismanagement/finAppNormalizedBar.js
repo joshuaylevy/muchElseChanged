@@ -10,7 +10,7 @@ const colors = ["0a5282","e0e0e2","81d2c7","b5bad0","e85f5c","7599b2","b1d9d5","
 
 commaFormat = d3.format(',')
 const data = d3.csv('assets/posts/sacMismanagement/FinAppFY19-20Allocations.csv').then(
-    data => {
+    dataFunc = data => {
         // turning strings into num
         data.forEach(function(d) {
             d.Funding = +d.Funding;
@@ -160,22 +160,24 @@ const data = d3.csv('assets/posts/sacMismanagement/FinAppFY19-20Allocations.csv'
 
         // chart title
         const title = d3.select('#finAppBarChart').append('div');
-        function titlePlacement(){
+        function titlePlacementBar(){
             title
-            .classed('chartTitle', true)
-            .style('left', function(){
-                rect = d3.selectAll('.bar')
-                    .filter(function(){
-                        return d3.select(this).attr('data-Applicant') == 'SAC';
-                    })
-                    .node().getBoundingClientRect();
-                rectLeft = rect.left;
-                return rectLeft + 'px';
-            })
-            .text('2019-20 GUSA FinApp Funding Allocation');
+                .classed('chartTitle', true)
+                .style('left', function(){
+                    rect = d3.selectAll('.bar')
+                        .filter(function(){
+                            return d3.select(this).attr('data-Applicant') == 'SAC';
+                        })
+                        .node().getBoundingClientRect();
+                    rectX = rect.x;
+                    console.log(rectX);
+                    return rectX + 'px';
+                })
+                .text('2019-20 GUSA FinApp Funding Allocation');
         }
-        titlePlacement()
-        window.onresize = titlePlacement;
+        titlePlacementBar()
+        
+        // window.onresize = titlePlacementBar;
     
         // creating tooltip div
         const tooltipdiv = d3.select('#finAppBarChart')
@@ -239,6 +241,8 @@ const data = d3.csv('assets/posts/sacMismanagement/FinAppFY19-20Allocations.csv'
                 .attr('stroke', 'black')
                 .attr('stroke-width', '4px');
         }
-    }
+
+    //WINDOWRESIZE FUNCTIONS THAT NEED TO BE ACCESSED GLOBALLY
+    dataFunc.titlePlacementBar = titlePlacementBar;
+    }    
 );
-        

@@ -265,6 +265,16 @@ p{
     margin: 30px auto;
 }
 
+@media (max-width: 600px){
+    p {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
 #finAppBarChart{
     width: 100%;
     margin: 30px auto;
@@ -306,11 +316,17 @@ p{
     position: relative;
     /* top: 0.5rem;
     left: 48%; */
-    margin-left: -1.5rem;
+    /* margin-left: -1.5rem; */
     height: 4px;
     width: 3rem;
     margin: 0.25rem 0;
     background: var(--yale-blue)
+}
+
+@media (max-width: 600px){
+    .charTitle{
+        font-size: 0.75rem;
+    }
 }
 
 .tick text{
