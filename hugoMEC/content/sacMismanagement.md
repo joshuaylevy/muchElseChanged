@@ -35,8 +35,11 @@ This is in large part due to the scale, scope, and number of SAC organizations. 
 
 {{< includeJS path="assets/posts/sacMismanagement/sacYearOnYearFunding.js" id="sacYearOnYearLine" >}}
 
-In addition to funding from FinApp, however, SAC also received funding directly from the Vice President's Office for Student Affairs to the tune of $84,000 and a further $8,800 in a grant award from the Coca Cola Foundation. (The Hoya - need to fact check the Coke number)
+In addition to funding from FinApp, however, SAC also received funding directly from the Vice President's Office for Student Affairs to the tune of $81,653 and a further $7,447 in a grant award from the Coca Cola Foundation. (The Hoya - need to fact check the Coke number)
 
+Over the course of the academic year, SAC disburses funds to eligible groups in response to requests made at a semesterly Budget Summit, or in response to "ad hoc" requests for funding which can be made on a weekly basis at public SAC meetings. However, ad hoc funding requests are supposedly evaluated in a more rigorous fashion. According SAC's Budget Guide for the Fiscal Year of 2018-19 -- the latest that is publicly available on SAC's website -- "Ad Hoc should be used to support events that we unable to be budgeted for at the time of the Budget Summit, or were unanticipated and unforeseen at the time the budget was developed."
+
+However, the proposals that SAC groups submit during the Budget Summit cannot include funding requests for travel events, certain types of conferences, space costs, security costs, or for equipment costs. As a consequence, groups are forced to turn to the ad hoc process even if they are able to project for these kinds of expenses at the time of the Budget Summit. These rules have been instituted in 
 
 {{< sectionSpacerSC >}}
 {{< sectionSpacerSC >}}

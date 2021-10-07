@@ -4,7 +4,7 @@ const BAR_THICK = 60;
 
 const CHART_WIDTH = 800 - MARGINS.left - MARGINS.right;
 const CHART_HEIGHT = 275 - MARGINS.top - MARGINS.bottom;
-const colors = ["0a5282","e0e0e2","81d2c7","b5bad0","e85f5c","7599b2","b1d9d5","9bc6cc","cf8d96","ea6e6b"];
+const colors = ["#0a5282","#e0e0e2","#81d2c7","#b5bad0","#e85f5c","#7599b2","#b1d9d5","#9bc6cc","#cf8d96","#ea6e6b"];
 
 // formats (large) numbers to have commas for ease of reading
 
